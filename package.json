@@ -10,10 +10,21 @@
   "engines": {
     "node": ">=16"
   },
-  "bin": "./src/main.cjs",
-  "main": "./bin/main.cjs",
+  "bin": "./lib/main.cjs",
+  "main": "./lib/main.cjs",
+  "scripts": {
+    "lint": "eslint --ext \"cjs\" --ignore-path .gitignore .",
+    "lint:fix": "yarn lint --fix"
+  },
   "dependencies": {
     "dotenv": "^16.0.1",
     "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "latest",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0"
   }
 }

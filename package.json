@@ -1,0 +1,19 @@
+{
+  "name": "dotvault",
+  "packageManager": "yarn@3.2.1",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:adriengraux/dotvault.git"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "bin": "./src/main.cjs",
+  "main": "./bin/main.cjs",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "yargs": "^17.5.1"
+  }
+}

@@ -16,6 +16,7 @@
   },
   "bin": "./lib/main.cjs",
   "main": "./lib/main.cjs",
+  "files": ["lib"],
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint --ext \"cjs\" --ignore-path .gitignore .",

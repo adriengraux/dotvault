@@ -2,7 +2,7 @@
   "name": "dotvault",
   "description": "Encrypt and decrypt .vault inside a .env file",
   "packageManager": "yarn@3.2.1",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "author": "Adrien Graux <adrien.graux@gmail.com>",
   "homepage": "https://github.com/adriengraux/dotvault#readme",
@@ -16,7 +16,9 @@
   },
   "bin": "./lib/main.cjs",
   "main": "./lib/main.cjs",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint --ext \"cjs\" --ignore-path .gitignore .",

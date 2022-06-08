@@ -18,7 +18,13 @@
     "lint:fix": "yarn lint --fix",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "postpublish": "pinst --enable",
+    "preversion": "yarn lint",
+    "version:patch": "yarn preversion && yarn version patch && yarn postversion",
+    "postversion": "yarn git:version && yarn npm publish && echo \"Successfully released version $npm_package_version!\"",
+    "git:version": "yarn git:tagversion && yarn git:commitversion && git push --tag && git push",
+    "git:commitversion": "git add .yarn package.json && git commit -m v$npm_package_version",
+    "git:tagversion": "git tag v$npm_package_version"
   },
   "dependencies": {
     "dotenv": "^16.0.1",

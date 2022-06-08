@@ -21,8 +21,10 @@
     "postpublish": "pinst --enable",
     "preversion": "yarn lint",
     "version:patch": "yarn preversion && yarn version patch && yarn postversion",
+    "version:minor": "yarn preversion && yarn version minor && yarn postversion",
+    "version:major": "yarn preversion && yarn version major && yarn postversion",
     "postversion": "yarn git:version && yarn npm publish && echo \"Successfully released version $npm_package_version!\"",
-    "git:version": "yarn git:tagversion && yarn git:commitversion && git push --tag && git push",
+    "git:version": "yarn git:commitversion && yarn git:tagversion && git push --tag && git push",
     "git:commitversion": "git add .yarn package.json && git commit -m v$npm_package_version",
     "git:tagversion": "git tag v$npm_package_version"
   },

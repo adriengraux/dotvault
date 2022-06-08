@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.1",
+    "joi": "^17.6.0",
     "yargs": "^17.5.1"
   },
   "devDependencies": {

@@ -36,6 +36,7 @@
     "git:tagversion": "git tag v$npm_package_version"
   },
   "dependencies": {
+    "cli-color": "^2.0.2",
     "dotenv": "^16.0.1",
     "joi": "^17.6.0",
     "yargs": "^17.5.1"
